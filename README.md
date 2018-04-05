@@ -65,11 +65,26 @@ udp 支持
 用后感：使用方法挺简单的，用起来很方便很不错。
 
 
+## JSON for Modern C++ [亲测可用]
+JSON for Modern C++ 是一个由德国大牛 nlohmann 编写的在 C++ 下使用的 JSON 库。
+具有以下特点
+直观的语法
+整个代码由一个头文件组成 json.hpp，没有子项目，没有依赖关系，没有复杂的构建系统，使用起来非常方便
+使用 C++ 11 标准编写
+使用 json 像使用 STL 容器一样
+STL 和 json 容器之间可以相互转换
+严谨的测试：所有类都经过严格的单元测试，覆盖了 100％ 的代码，包括所有特殊的行为。此外，还检查了 Valgrind 是否有内存泄漏。为了保持高质量，该项目遵循核心基础设施倡议(CII)的最佳实践
+项目地址： https://github.com/nlohmann/json
+fork项目地址： https://github.com/HeLiangHIT/json
 
-
-
-
-
+编译安装：这个工程的使用只需要一个头文件，无需编译和安装！非常简单，下面的命令是编译测试代码而已。
+```
+mkdir build && cd build
+cmake .. && cmake --build .
+```
+还有很多高级的用法参考readme。
+编码测试（含命令）：[./demo/json/main.cpp](./demo/json/main.cpp)
+用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！
 
 
 
