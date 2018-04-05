@@ -19,7 +19,7 @@ cp -a ../include/gmock ~/include
 cp -a *.a ~/lib
 ```
 
-## 基于C++11 的高性能网络服务器 evpp
+## 基于C++11 的高性能网络服务器 evpp[编译不过]
 项目简介： evpp 是一个基于 libevent 开发的现代化 C++11 高性能网络服务器，自带 TCP/UDP/HTTP 等协议的异步非阻塞式的服务器和客户端库，具有如下特性：
 现代版的 C++11接口
 非阻塞异步接口都是 C++11 的 functional/bind 形式的回调仿函数（不是 libevent 中的C风格的函数指针）
@@ -84,7 +84,7 @@ cmake .. && cmake --build .
 ```
 还有很多高级的用法参考readme。
 编码测试（含命令）：[./demo/json/main.cpp](./demo/json/main.cpp)
-用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！
+用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！相比JSON官方推荐的第三方库JsonCpp这个使用体验好多了--无需安装和链接等麻烦的操作！
 
 
 
