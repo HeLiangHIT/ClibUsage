@@ -116,8 +116,27 @@ flags           : aes,avx,cx16,smx,sse4_1,sse4_2,ssse3"
 编译测试： [./demo/cpu_features/main.c](./demo/cpu_features/main.c)
 
 
+# C图形界面开发库 LCUI
+项目介绍： https://www.oschina.net/p/lcui
+官网： http://www.lcui.org/
+GitHub地址： https://github.com/lc-soft/LCUI
+LCUI 是一个用 C 语言编写的图形界面开发库，支持使用 CSS 和 XML 描述界面布局和样式，可用于构建简单的桌面应用程序。
+此项目主要由作者利用闲余时间进行开发和维护，项目的活跃度通常会受到各种因素的影响，大多数时间内都处于低活跃度状态。
+写出来的界面相比VS很优美！
 
+测试安装和测试：
+```sh
+git clone https://github.com/lc-soft/LCUI.git
+cd LCUI
+./autogen.sh
+./configure
+make
+make install
 
+cd test
+make
+./hellowrold
+```
 
 
 
