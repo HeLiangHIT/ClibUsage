@@ -65,7 +65,6 @@ udp 支持
 用后感：使用方法挺简单的，用起来很方便很不错。
 
 
-## JSON for Modern C++ [亲测可用]
 JSON for Modern C++ 是一个由德国大牛 nlohmann 编写的在 C++ 下使用的 JSON 库。
 具有以下特点
 直观的语法
@@ -85,6 +84,44 @@ cmake .. && cmake --build .
 还有很多高级的用法参考readme。
 编码测试（含命令）：[./demo/json/main.cpp](./demo/json/main.cpp)
 用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！相比JSON官方推荐的第三方库JsonCpp这个使用体验好多了--无需安装和链接等麻烦的操作！
+
+# cpu_features 一个CPU功能分析工具
+项目地址： https://github.com/google/cpu_features
+
++ Simple to use. See the snippets below for examples.
++ Extensible. Easy to add missing features or architectures.
++ Compatible with old compilers and available on many architectures so it can be used widely. To ensure that cpu_features works on as many platforms as possible, we implemented it in a highly portable version of C: C99.
++ Sandbox-compatible. The library uses a variety of strategies to cope with sandboxed environments or when cpuid is unavailable. This is useful when running integration tests in hermetic environments.
++ Thread safe, no memory allocation, and raises no exceptions. cpu_features is suitable for implementing fundamental libc functions like malloc, memcpy, and memcmp.
++ Unit tested.
+
+编译：
+```sh
+mkdir build && cd build
+cmake .. && make -j
+./build/list_cpu_features # 列出本机CPU参数
+"arch           : x86
+brand           :  Intel(R) Xeon(R) CPU E5-1650 0 @ 3.20GHz
+family          :   6 (0x06)
+model           :  45 (0x2D)
+stepping        :   7 (0x07)
+uarch           : INTEL_SNB
+flags           : aes,avx,cx16,smx,sse4_1,sse4_2,ssse3"
+```
+使用：直接使用前面编译的苦，或者参考官方说明使用如下方法编译代码到项目中
+1- Download cpu_features and copy it in a sub-directory in your project. or add cpu_features as a git-submodule in your project
+2- You can then use the cmake command add_subdirectory() to include cpu_features directly and use the cpu_features target in your project.
+3- Add the cpu_features target to the target_link_libraries() section of your executable or of your library.
+
+编译测试： [./demo/cpu_features/main.c](./demo/cpu_features/main.c)
+
+
+
+
+
+
+
+
 
 
 
