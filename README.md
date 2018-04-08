@@ -7,6 +7,9 @@ brew install glog # 安装到了 /usr/local/Cellar/glog/0.3.5_3
 brew install libevent # 安装到了 /usr/local/Cellar/libevent/2.1.8
 brew install gcc make cmake
 brew install boost # 安装到了 /usr/local/Cellar/boost/1.66.0
+brew install autoconf # /usr/local/Cellar/autoconf/2.69
+brew install automake # /usr/local/Cellar/automake/1.16.1
+brew install pkg-config # /usr/local/Cellar/pkg-config/0.29.2
 # 将 gtest 安装到根目录下
 git clone https://github.com/google/googletest.git
 cd googletest/googletest && mkdir bld && cd bld
@@ -127,17 +130,14 @@ LCUI 是一个用 C 语言编写的图形界面开发库，支持使用 CSS 和 
 测试安装和测试：
 ```sh
 git clone https://github.com/lc-soft/LCUI.git
-cd LCUI
-./autogen.sh
-./configure
-make
-make install
+cd LCUI && ./autogen.sh && ./configure --prefix=/Users/heliang/ # 会自己新建lib文件夹
+make -j && make install
 
-cd test
-make
+cd test && make
 ./hellowrold
 ```
 
+测试结果： 在mac上无法编译，因为字体无法读取，开发者应该只是在win上测试了。
 
 
 
