@@ -10,7 +10,7 @@ brew install boost # 安装到了 /usr/local/Cellar/boost/1.66.0
 brew install autoconf # /usr/local/Cellar/autoconf/2.69
 brew install automake # /usr/local/Cellar/automake/1.16.1
 brew install pkg-config # /usr/local/Cellar/pkg-config/0.29.2
-# 将 gtest 安装到根目录下
+# 将 gtest 安装到home目录下
 git clone https://github.com/google/googletest.git
 cd googletest/googletest && mkdir bld && cd bld
 cmake .. && make -j
@@ -20,6 +20,11 @@ cd ../../googlemock && mkdir bld && cd bld
 cmake .. && make -j
 cp -a ../include/gmock ~/include
 cp -a *.a ~/lib
+# 将 protobuf 安装到home目录下
+git clone git@github.com:google/protobuf.git
+cd protobuf && ./autogen.sh && mkdir bld && cd bld 
+../configure --prefix=/Users/heliang/
+sudo make -j && make install
 ```
 
 ## 基于C++11 的高性能网络服务器 evpp[编译不过]
