@@ -144,7 +144,10 @@ cd test && make
 
 测试结果： 在mac上无法编译，因为字体无法读取，开发者应该只是在win上测试了。
 
-
+# 微信c/c++协程库
+项目地址： https://github.com/Tencent/libco
+libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co_poll，可以支持同步或者异步的写法，如线程库一样轻松。同时库里面提供了socket族函数的hook，使得后台逻辑服务几乎不用修改逻辑代码就可以完成异步化改造。
+> 和libprocess比貌似还差一些，编写代码并不怎么方便。项目下面有例子，但是写法可读性并不强，有点怀疑代码的稳定性和可靠性。
 
 
 
