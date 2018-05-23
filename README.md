@@ -27,6 +27,13 @@ cd protobuf && ./autogen.sh && mkdir bld && cd bld
 sudo make -j && make install
 ```
 
+# 网络
+
+## HTTP客户端 cpprestexample
+地址：https://github.com/shaovoon/cpprestexample 
+例子： https://www.codeproject.com/Articles/1244632/Making-HTTP-REST-Request-in-Cplusplus
+
+
 ## 基于C++11 的高性能网络服务器 evpp[编译不过]
 项目简介： evpp 是一个基于 libevent 开发的现代化 C++11 高性能网络服务器，自带 TCP/UDP/HTTP 等协议的异步非阻塞式的服务器和客户端库，具有如下特性：
 现代版的 C++11接口
@@ -72,7 +79,8 @@ udp 支持
 编码测试（含命令）：[./demo/handy/main.cpp](./demo/handy/main.cpp)
 用后感：使用方法挺简单的，用起来很方便很不错。
 
-
+# 工具
+## json库
 JSON for Modern C++ 是一个由德国大牛 nlohmann 编写的在 C++ 下使用的 JSON 库。
 具有以下特点
 直观的语法
@@ -93,7 +101,9 @@ cmake .. && cmake --build .
 编码测试（含命令）：[./demo/json/main.cpp](./demo/json/main.cpp)
 用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！相比JSON官方推荐的第三方库JsonCpp这个使用体验好多了--无需安装和链接等麻烦的操作！
 
-# cpu_features 一个CPU功能分析工具
+
+
+## cpu_features 一个CPU功能分析工具
 项目地址： https://github.com/google/cpu_features
 
 + Simple to use. See the snippets below for examples.
@@ -123,6 +133,18 @@ flags           : aes,avx,cx16,smx,sse4_1,sse4_2,ssse3"
 
 编译测试： [./demo/cpu_features/main.c](./demo/cpu_features/main.c)
 
+## simplebinstream 最小二进制流
+基于C ++文件流的基于头文件的最小二进制流，其中可以为您的自定义类型重载流操作符。
+源码： https://github.com/shaovoon/simplebinstream
+用法： https://www.codeproject.com/Tips/808776/Cplusplus-Simplistic-Binary-Streams
+核心语法参考： https://www.codeproject.com/Tips/1244491/Cplusplus-Compile-time-Conditional-Types
+
+
+## 微信c/c++协程库
+项目地址： https://github.com/Tencent/libco
+libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co_poll，可以支持同步或者异步的写法，如线程库一样轻松。同时库里面提供了socket族函数的hook，使得后台逻辑服务几乎不用修改逻辑代码就可以完成异步化改造。
+> 和libprocess比貌似还差一些，编写代码并不怎么方便。项目下面有例子，但是写法可读性并不强，有点怀疑代码的稳定性和可靠性。
+
 
 # C图形界面开发库 LCUI
 项目介绍： https://www.oschina.net/p/lcui
@@ -143,11 +165,6 @@ cd test && make
 ```
 
 测试结果： 在mac上无法编译，因为字体无法读取，开发者应该只是在win上测试了。
-
-# 微信c/c++协程库
-项目地址： https://github.com/Tencent/libco
-libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co_poll，可以支持同步或者异步的写法，如线程库一样轻松。同时库里面提供了socket族函数的hook，使得后台逻辑服务几乎不用修改逻辑代码就可以完成异步化改造。
-> 和libprocess比貌似还差一些，编写代码并不怎么方便。项目下面有例子，但是写法可读性并不强，有点怀疑代码的稳定性和可靠性。
 
 
 
