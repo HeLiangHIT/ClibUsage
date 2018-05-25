@@ -139,6 +139,16 @@ flags           : aes,avx,cx16,smx,sse4_1,sse4_2,ssse3"
 用法： https://www.codeproject.com/Tips/808776/Cplusplus-Simplistic-Binary-Streams
 核心语法参考： https://www.codeproject.com/Tips/1244491/Cplusplus-Compile-time-Conditional-Types
 
+## uftrace 跟踪和分析 C/C++ 程序执行情况[简单实用]
+uftrace 用于跟踪和分析 C/C++ 编写的程序的执行情况，它受到 Linux 内核的 ftrace 框架的启发（特别是 function graph tracer），支持 userspace 程序。uftrace 还支持各种类型的命令和过滤器，以帮助分析程序执行和性能。
+功能特性
++ 跟踪可执行文件中的每个函数并显示持续时间，还可以跟踪外部库调用，只支持入口和出口，并且不能跟踪库调用中的内部函数调用，除非库本身已启用分析构建。
++ 可以在函数层面显示详细的执行流程，并报告哪个函数的开销最高，它还显示与执行环境有关的各种信息。
++ 在追踪时，可以设置过滤器以排除或包含特定的函数。另外，它可以保存和显示函数参数并返回值。
++ 它支持多进程/多线程应用程序， 如果系统启用内核中的 function graph tracer，并使用 root 权限，可以跟踪内核函数（使用 -k 参数）
+
+地址： https://github.com/namhyung/uftrace
+看官网就知道很实用！安装和使用都很简单！
 
 ## 微信c/c++协程库
 项目地址： https://github.com/Tencent/libco

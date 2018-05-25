@@ -1,0 +1,42 @@
+ifeq ($(wildcard $(srcdir)/check-deps/clock_without_librt),)
+  LDFLAGS_libmcount.so += -lrt
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/cc_has_mfentry),)
+  export HAVE_CC_MFENTRY = 1
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/cxa_demangle),)
+  COMMON_CFLAGS += -DHAVE_CXA_DEMANGLE
+  COMMON_LDFLAGS += -lstdc++
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/cc_has_mno_sse2),)
+  LIB_CFLAGS += -mno-sse2
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/have_libpython2.7),)
+  COMMON_CFLAGS += -DHAVE_LIBPYTHON2
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/perf_clockid),)
+  COMMON_CFLAGS += -DHAVE_PERF_CLOCKID
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/perf_context_switch),)
+  COMMON_CFLAGS += -DHAVE_PERF_CTXSW
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/arm_has_hardfp),)
+  COMMON_CFLAGS += -DHAVE_ARM_HARDFP
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/have_libncurses),)
+  COMMON_CFLAGS += -DHAVE_LIBNCURSES $(shell pkg-config --cflags ncursesw)
+  UFTRACE_LDFLAGS += $(shell pkg-config --libs ncursesw)
+endif
+
+ifneq ($(wildcard $(srcdir)/check-deps/cc_has_wstringop_truncation),)
+  COMMON_CFLAGS += -Wno-stringop-truncation
+endif
+
