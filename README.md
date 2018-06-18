@@ -79,6 +79,17 @@ udp 支持
 编码测试（含命令）：[./demo/handy/main.cpp](./demo/handy/main.cpp)
 用后感：使用方法挺简单的，用起来很方便很不错。
 
+# 游戏
+## 新一代 C ++ 游戏开发框架 bs :: framework
+bs::framework 是一个新一代 C ++ 游戏开发框架，专注于现代技术、高质量设计和高性能，旨在为开发实时图形应用程序（游戏、引擎或工具）提供统一的基础。
+
+bs::framework 提供了从音频、动画、GUI、输入、物理、渲染到脚本系统等图形应用开发所需的一切。它还内置了对30多种图像、mesh 和音频格式的支持，以及应用广泛的数学库、RTTI（run-time type information）、CPU / GPU分析、SIMD 指令 API 和更多。跨 Windows、Linux 和 MacOS 平台。
+
+下载地址： https://gitee.com/mirrors/bs-framework 或者 https://github.com/GameFoundry/bsf
+
+
+
+
 # 工具
 ## json库
 JSON for Modern C++ 是一个由德国大牛 nlohmann 编写的在 C++ 下使用的 JSON 库。
