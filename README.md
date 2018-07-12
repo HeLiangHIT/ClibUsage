@@ -184,6 +184,9 @@ libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co
 更易懂的协程库： https://github.com/yyzybb537/libgo
 用法参考其 tutorial 下面的操作，用起来似乎非常简单。
 
+## ORM 数据库工具 Bun
+ref: https://github.com/BrainlessLabs/bun
+说明： https://www.codeproject.com/Articles/1100449/Cplusplus-Object-Relational-Mapping-ORM-Eating-the
 
 
 # C图形界面开发库 LCUI
