@@ -1,0 +1,11 @@
+
+ref: https://www.codeproject.com/Articles/1087619/State-Machine-Design-in-Cplusplus-2
+
+编译运行:
+```sh
+cd StateMachineCompact
+g++ Main.cpp Motor.cpp StateMachine.cpp -o motor
+
+cd StateMachine
+g++ *.cpp -o motor
+```
