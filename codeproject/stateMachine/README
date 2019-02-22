@@ -1,11 +1,12 @@
 
 ref: https://www.codeproject.com/Articles/1087619/State-Machine-Design-in-Cplusplus-2
+主要是状态机的高效实现。专注于状态机代码和简单的示例，其复杂程度足以帮助理解功能和用法。客服了 switch-case 类状态机的很多缺陷。DEMO 是一个关于电机状态切换的例子。
 
 编译运行:
 ```sh
 cd StateMachineCompact
-g++ Main.cpp Motor.cpp StateMachine.cpp -o motor
+g++ Main.cpp Motor.cpp StateMachine.cpp -o motor # 包含了一个简单的DEMO-包含自己的注释
 
 cd StateMachine
-g++ *.cpp -o motor
+g++ *.cpp -o motor # 包含了一个复杂但是全面的 DEMO
 ```

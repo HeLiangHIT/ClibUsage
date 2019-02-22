@@ -28,13 +28,14 @@ private:
     EventData* _pEventData;
     void StateEngine(void);
 };
- 
+
 typedef void (StateMachine::*StateFunc)(EventData *);
 struct StateStruct 
 {
     StateFunc pStateFunc;    
 };
- 
+
+// 主要用于定义 GetStateMap 函数，状态机定义中只能用一次
 #define BEGIN_STATE_MAP \
 public:\
 const StateStruct* GetStateMap() {\
@@ -46,7 +47,8 @@ const StateStruct* GetStateMap() {\
 #define END_STATE_MAP \
     }; \
     return &StateMap[0]; }
- 
+
+// 主要用于定义状态切换，事件触发时使用多次
 #define BEGIN_TRANSITION_MAP \
     static const unsigned char TRANSITIONS[] = {\
  

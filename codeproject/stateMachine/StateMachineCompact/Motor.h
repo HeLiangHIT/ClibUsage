@@ -26,7 +26,7 @@ private:
 
     // state map to define state function order
     BEGIN_STATE_MAP
-		STATE_MAP_ENTRY(&Motor::ST_Idle)
+        STATE_MAP_ENTRY(&Motor::ST_Idle)
         STATE_MAP_ENTRY(&Motor::ST_Stop)
         STATE_MAP_ENTRY(&Motor::ST_Start)
         STATE_MAP_ENTRY(&Motor::ST_ChangeSpeed)
