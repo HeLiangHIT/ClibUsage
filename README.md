@@ -2,7 +2,7 @@
 一些开源库的使用方法介绍和实例
 
 常用依赖包：
-```sh
+```
 brew install glog # 安装到了 /usr/local/Cellar/glog/0.3.5_3
 brew install libevent # 安装到了 /usr/local/Cellar/libevent/2.1.8
 brew install gcc make cmake
