@@ -34,21 +34,22 @@ private:
 // the constructor just launches some amount of workers
 inline ThreadPool::ThreadPool(size_t threads) : stop(false) {
   for (size_t i = 0; i < threads; ++i)
+    // 创建多个工作线程 workers，每一个线程的主任务都是无限循环等待 this->condition 的通知到达后运行对应的task
     workers.emplace_back([this] {
       for (;;) {
         std::function<void()> task;
-
         {
           std::unique_lock<std::mutex> lock(this->queue_mutex);
-          this->condition.wait(
-              lock, [this] { return this->stop || !this->tasks.empty(); });
+          // 等待消息通知后拿到任务来运行
+          this->condition.wait(lock, 
+            [this] { return this->stop || !this->tasks.empty(); });
           if (this->stop && this->tasks.empty())
-            return;
+            return; // 收到 stop 命令且 tasks 执行完成后才退出
           task = std::move(this->tasks.front());
           this->tasks.pop();
         }
 
-        task();
+        task(); // 运行线程的主要任务
       }
     });
 }
@@ -70,7 +71,7 @@ auto ThreadPool::enqueue(F &&f, Args &&... args)
     if (stop)
       throw std::runtime_error("enqueue on stopped ThreadPool");
 
-    tasks.emplace([task]() { (*task)(); });
+    tasks.emplace([task](){ (*task)(); }); //增加tasks任务，使用 lambda 的形式运行task() -> 函数bind参数后的函数指针
   }
   condition.notify_one();
   return res;

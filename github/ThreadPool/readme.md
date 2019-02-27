@@ -13,3 +13,5 @@ auto result = pool.enqueue([](int answer) { return answer; }, 42);
 // get result from future
 std::cout << result.get() << std::endl;
 ```
+
+代码已增加注释

@@ -4,7 +4,7 @@
 
 #include "ThreadPool.h"
 
-int main() {
+int main(int argc, char const *argv[]) {
   ThreadPool pool(4);
   std::vector<std::future<int>> results;
 
