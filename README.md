@@ -34,15 +34,30 @@ https://github.com/mapbox/gzip-hpp
 纯 hpp 的 gzip 库文件，非常简洁易用。
 参考 [ClibUsage/github/gzip-hpp/gzip](ClibUsage/github/gzip-hpp/gzip)
 
+
 ## 信号和槽绑定库 only hpp
 https://github.com/fr00b0/nod
 用于信号和槽的使用，仅头文件。线程安全~
 参考 [ClibUsage/github/nod/nod.hpp](ClibUsage/github/nod/nod.hpp)
 
+
 ## ThreadPool only hpp
 https://github.com/progschj/ThreadPool
 用于快速创建线程池
 参考 [ClibUsage/github/ThreadPool/ThreadPool.h](ClibUsage/github/ThreadPool/ThreadPool.h)
+
+
+## pprint 智能打印
+https://github.com/p-ranav/pprint
+
++ Single header file
++ Requires C++17
++ MIT License
+
+参考 [ClibUsage/github/pprint/pprint.hpp](ClibUsage/github/pprint/pprint.hpp)
+
+
+
 
 # 网络
 
