@@ -27,6 +27,23 @@ cd protobuf && ./autogen.sh && mkdir bld && cd bld
 sudo make -j && make install
 ```
 
+# only hpp
+
+## gzip 压缩解压 only hpp
+https://github.com/mapbox/gzip-hpp
+纯 hpp 的 gzip 库文件，非常简洁易用。
+
+## 信号和槽绑定库 only hpp
+https://github.com/fr00b0/nod
+用于信号和槽的使用，仅头文件。线程安全~
+参考 [ClibUsage/github/nod/nod.hpp](ClibUsage/github/nod/nod.hpp)
+
+
+## ThreadPool only hpp
+https://github.com/progschj/ThreadPool
+用于快速创建线程池
+
+
 # 网络
 
 ## HTTP客户端 cpprestexample
@@ -112,8 +129,6 @@ cmake .. && cmake --build .
 编码测试（含命令）：[./demo/json/main.cpp](./demo/json/main.cpp)
 用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！相比JSON官方推荐的第三方库JsonCpp这个使用体验好多了--无需安装和链接等麻烦的操作！
 
-
-
 ## cpu_features 一个CPU功能分析工具
 项目地址： https://github.com/google/cpu_features
 
@@ -160,7 +175,8 @@ uftrace 用于跟踪和分析 C/C++ 编写的程序的执行情况，它受到 L
 
 地址： https://github.com/namhyung/uftrace
 看官网就知道很实用！安装和使用都很简单！
-```sh
+
+```
 make; make install; # 编译安装
 # 编译程序增加参数 -pg (or -finstrument-functions) 以保证产生各个函数的分析代码
 uftrace tests/t-abc # 查看函数调用代码
@@ -174,7 +190,7 @@ uftrace dump --chrome #浏览器查看结果
 
 
 
-## 微信c/c++协程库
+## 腾讯c/c++协程库
 项目地址： https://github.com/Tencent/libco
 libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co_poll，可以支持同步或者异步的写法，如线程库一样轻松。同时库里面提供了socket族函数的hook，使得后台逻辑服务几乎不用修改逻辑代码就可以完成异步化改造。
 > 和libprocess比貌似还差一些，编写代码并不怎么方便。项目下面有例子，但是写法可读性并不强，有点怀疑代码的稳定性和可靠性。
