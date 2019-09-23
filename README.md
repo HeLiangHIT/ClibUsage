@@ -56,6 +56,8 @@ https://github.com/p-ranav/pprint
 
 参考 [ClibUsage/github/pprint/pprint.hpp](ClibUsage/github/pprint/pprint.hpp)
 
+## csv 解析读取
+https://github.com/ben-strasser/fast-cpp-csv-parser
 
 
 
@@ -123,6 +125,7 @@ bs::framework 提供了从音频、动画、GUI、输入、物理、渲染到脚
 
 
 # 工具
+
 ## json库
 JSON for Modern C++ 是一个由德国大牛 nlohmann 编写的在 C++ 下使用的 JSON 库。
 具有以下特点
@@ -143,6 +146,10 @@ cmake .. && cmake --build .
 还有很多高级的用法参考readme。
 编码测试（含命令）：[./demo/json/main.cpp](./demo/json/main.cpp)
 用后感：没有比这个更好用的c++json库了！只需要头文件就可以了！相比JSON官方推荐的第三方库JsonCpp这个使用体验好多了--无需安装和链接等麻烦的操作！
+
+> 另一个 JSON 库参考: https://github.com/dropbox/json11
+
+
 
 ## cpu_features 一个CPU功能分析工具
 项目地址： https://github.com/google/cpu_features
