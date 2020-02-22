@@ -226,6 +226,14 @@ libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co
 ref: https://github.com/BrainlessLabs/bun
 说明： https://www.codeproject.com/Articles/1100449/Cplusplus-Object-Relational-Mapping-ORM-Eating-the
 
+## Tinn - C 语言实现的微型神经网络库 
+ref: https://github.com/glouw/tinn
+在 C 标准库的范围内，源码少于200行。
+适合嵌入式系统。在强大的桌面系统上训练模型并将其加载到微控制器上，并使用模数转换器来预测实时事件。
+可以很容易地使用一些独创性的多线程，但主分支将保持单线程来帮助开发嵌入式系统。
+输入数据，每次训练迭代后再次洗牌数据。
+通过降低学习率来获得更高的培训准确度。例如，将每次训练迭代的学习率乘以0.99。这将在一个良好的学习最低限度内达到零。
+
 
 # C图形界面开发库 LCUI
 项目介绍： https://www.oschina.net/p/lcui
