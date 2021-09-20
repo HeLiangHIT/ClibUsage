@@ -113,8 +113,14 @@ udp 支持
 编码测试（含命令）：[./demo/handy/main.cpp](./demo/handy/main.cpp)
 用后感：使用方法挺简单的，用起来很方便很不错。
 
+## C++11编写的Web服务器
+源码地址: https://github.com/linyacool/WebServer
+C++11编写的Web服务器，解析了get、head请求，可处理静态资源，支持HTTP长连接，支持管线化请求，并实现了异步日志，记录服务器运行状态。
+
+
+
 # 游戏
-## 新一代 C ++ 游戏开发框架 bs :: framework
+## 新一代 C ++ 游戏开发框架 bs::framework
 bs::framework 是一个新一代 C ++ 游戏开发框架，专注于现代技术、高质量设计和高性能，旨在为开发实时图形应用程序（游戏、引擎或工具）提供统一的基础。
 
 bs::framework 提供了从音频、动画、GUI、输入、物理、渲染到脚本系统等图形应用开发所需的一切。它还内置了对30多种图像、mesh 和音频格式的支持，以及应用广泛的数学库、RTTI（run-time type information）、CPU / GPU分析、SIMD 指令 API 和更多。跨 Windows、Linux 和 MacOS 平台。
@@ -226,7 +232,7 @@ libco通过仅有的几个函数接口 co_create/co_resume/co_yield 再配合 co
 ref: https://github.com/BrainlessLabs/bun
 说明： https://www.codeproject.com/Articles/1100449/Cplusplus-Object-Relational-Mapping-ORM-Eating-the
 
-## Tinn - C 语言实现的微型神经网络库 
+## Tinn - C 语言实现的微型神经网络库
 ref: https://github.com/glouw/tinn
 在 C 标准库的范围内，源码少于200行。
 适合嵌入式系统。在强大的桌面系统上训练模型并将其加载到微控制器上，并使用模数转换器来预测实时事件。
